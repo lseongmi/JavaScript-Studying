@@ -31,9 +31,11 @@
 		var s = document.querySelector("#start");
 
 		s.addEventListener("click", function() {
+			//Number 구현
 			// document.querySelector("#round").value = Number(r.value) * Math.PI * 2;
 			// document.querySelector("#area").value = Math.PI * Number(r.value) * Number(r.value);
 
+			//parseInt 구현
 			document.querySelector("#round").value = parseInt(r.value) * Math.PI * 2;
 			document.querySelector("#area").value = Math.PI * parseInt(r.value) * parseInt(r.value);
 		})
