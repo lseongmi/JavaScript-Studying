@@ -7,6 +7,7 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+          //해체 할당이 안된 변수의 기본값을 지정할 수 있음
           let [a, b, c = 3] = [1, 2];
           console.log(c); //실행 결과 "3"
         </script>

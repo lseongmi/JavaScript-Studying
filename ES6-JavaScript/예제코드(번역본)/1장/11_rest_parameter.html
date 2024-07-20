@@ -17,6 +17,8 @@
           Myfunction(1,2,3,4,5);
 
           //나머지 파라미터를 쓰면 훨씬 간결하다
+          //arguments는 배열 객체가 아니라서 일단 배열로 바꾼 후 배열 기능을 사용할 수 있지만
+          //나머지 파라미터는 그 자체가 배열이라 쉽고 편하게 사용할 수 있다. 
           function myFunction(a, b, ...args)
           {
             console.log(args);
