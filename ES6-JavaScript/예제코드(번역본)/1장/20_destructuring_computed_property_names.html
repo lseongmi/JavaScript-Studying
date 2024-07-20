@@ -7,6 +7,7 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //프로퍼티 명을 동적으로 조합할 경우 표현식으로 [] 감싼다
             let {["first"+"Name"]: x} = { firstName: "수지" };
 
             console.log(x); //실행 결과 "수지"

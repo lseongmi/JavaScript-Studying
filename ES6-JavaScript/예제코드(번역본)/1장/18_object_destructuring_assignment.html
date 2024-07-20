@@ -7,10 +7,25 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //es5 이전
+            let object1 = {"name" : "민호", "age" : 23};
+            let name1 = object1.name;
+            let age1 = object1.age;
+            
+            //좌변에 할당할 변수를 열거{}하고 우변에는 객체를 놓은 다음 ()로 감싼다.
+            //({ , } =  );
+            //무조건 객체 프로퍼티명과 변수명은 같아야 한다.
             let object = {"name" : "민호", "age" : 23};
             let name, age;
 
             ({name, age} = object); //배열 해체 할당 구문
+
+            //변수의 명을 달리 하고 싶을 때는
+            let object2 = {"name" : "민호", "age" : 23};
+            let x, y;
+            ({name:x, age:y} = object2)
+            //더 짧게
+            let {name : z, age : k} = {"name" : "민호", "age" : 23};
         </script>
     </body>
 </html>

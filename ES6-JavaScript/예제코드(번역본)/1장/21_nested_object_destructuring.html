@@ -7,6 +7,7 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //중첩된 객체 프로퍼티 추출
 			var {name, otherInfo: {age}} = {name: "수지", otherInfo: {age: 23}};
 			console.log(name, age); //수지 23
         </script>

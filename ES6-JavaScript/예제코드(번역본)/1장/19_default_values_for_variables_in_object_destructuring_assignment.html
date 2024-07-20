@@ -7,6 +7,7 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //프로퍼티가 undefined일 경우에는 변수에 기본값을 준다
             let {a, b, c = 3} = {a: "1", b: "2"};
             console.log(c); //실행 결과 "3"
         </script>
