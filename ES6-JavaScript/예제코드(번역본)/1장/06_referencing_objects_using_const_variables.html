@@ -7,16 +7,20 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+          // const a의 객체를 할당하였기 때문에
+          // 참조형을 객체가 아닌 상수에 고정하므로 가변상태가 된다
           const a = {
             "name" : "민호"
           };
 
           console.log(a.name); 
 
+          //객체 자신은 얼마든지 변경 가능
           a.name = "수지";
 
           console.log(a.name);
 
+          //객체의 주고 즉 참조값을 담고 있으므로 불변값.
           a = {}; //읽기 전용 예외 발생
         </script>
     </body>
