@@ -7,18 +7,19 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+			//let은 블록스코프 변수이므로 같은 블록 내 중복 선언이 불가능하다
 			let a = 0;
-			let a = 1; //TypeError
+			//let a = 1; //TypeError
 
 			function myFunction()
 			{
 			  let b = 2;
-			  let b = 3; //TypeError
+			  //let b = 3; //TypeError
 			  
 			  if(true)
 			  {
 			    let c = 4;
-			    let c = 5; //TypeError
+			    //let c = 5; //TypeError
 			  }
 			}
 
