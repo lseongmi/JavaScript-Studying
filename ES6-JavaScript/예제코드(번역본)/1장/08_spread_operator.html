@@ -7,6 +7,17 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+          //es5 이전 apply를 사용하여 이터러블 객체를 인자로 넣을 수 있었다.
+          function Myfunction(a, b) {
+            return a + b;
+          }
+          var data1 = [1, 4];
+          var result1 = Myfunction.apply(null, data1);
+
+          console.log(result1);
+
+          //es6 펼침 연산자를 사용하면 더 간단하다
+          //..data를 먼저 1, 4로 치환한 다음 myFunction함수를 호출
           function myFunction(a, b)
           {
             return a + b;

@@ -7,6 +7,16 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+          //es5 이전에는 arguments 객체를 거쳐 인자를 사용하였다
+          function Myfunction(a, b) {
+            var args = Array.prototype.slice.call(arguments, Myfunction.length);
+
+            console.log(args);
+          }
+
+          Myfunction(1,2,3,4,5);
+
+          //나머지 파라미터를 쓰면 훨씬 간결하다
           function myFunction(a, b, ...args)
           {
             console.log(args);

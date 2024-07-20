@@ -7,6 +7,18 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+          //ES6 구문 전
+          function Myfunction(x, y, z) {
+            x = x === undefined ? 1 : x;
+            y = y === undefined ? 2 : y;
+            z = z === undefined ? 3 : z;
+
+            console.log(x, y, z);
+          }
+          Myfunction(6, 7);
+
+          //기본값이 생겼다. undefined를 넘기면 누락된 것으로 간주하고
+          //기본값을 할당한다
           function myFunction(x = 1, y = 2, z = 3 + 5) 
           { 
             console.log(x, y, z); //실행 결과 "6 7 3"
