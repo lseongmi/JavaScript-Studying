@@ -7,6 +7,7 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //원래의 this는 콘텍스트 객체를 가리키지만 화살표 함수에서는 해당 스코프 값과 같다
             var object = {
                 f1: () => {
                     console.log(this);

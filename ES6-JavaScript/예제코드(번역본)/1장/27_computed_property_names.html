@@ -7,6 +7,15 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //es5이전
+            var object1 = {};
+
+            object1["first" + "Name"] = "수지";
+
+            console.log(object1["first" + "Name"]);
+
+            //런타임 시점에 프로퍼티명을 조합한 것
+            //객체 생성 후 프로퍼티를 덧붙이는 식이다 
             let object = {
               ["first" + "Name"]: "수지", 
             };

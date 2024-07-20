@@ -7,6 +7,8 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //간결해진 구분 덕분에 객체 메소드에서 사용할 수 없었던
+            //super를 쓸 구 있게 됐다
             let object = {
                 myFunction(){
                     console.log("안녕하세요!!!");

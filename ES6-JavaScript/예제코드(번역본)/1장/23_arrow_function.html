@@ -7,6 +7,18 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //es5 이전
+            var circleArea1 = function(pi, r) {
+                var area1 = pi * r * r;
+                return area1;
+            }
+            
+            var result1 = circleArea1(3.14, 3);
+
+            console.log(result1);
+
+            //간결한 구문을 지닌 익명함수
+            //화살표 함수를 참조하는 변수
             let circleArea = (pi, r) => {
                 let area = pi * r * r;
                 return area;
@@ -15,6 +27,14 @@
             let result = circleArea(3.14, 3);
 
             console.log(result); //실행 결과 "28.26"
+
+            //하나의 문밖에 없는 함수는 {}를 생략할 수 있다.
+            //{}가 없기 떄문에 내부의 문 값을 자동으로 반환
+            let circleArea2 = (pi, r) => pi * r * r;
+            let result2 = circleArea2(3.14, 3);
+
+            console.log(result2);
+
         </script>
     </body>
 </html>
