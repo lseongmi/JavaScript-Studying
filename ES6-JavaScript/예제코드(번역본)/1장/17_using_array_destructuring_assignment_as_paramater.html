@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+        <script type="module">
+            function myFunction([a, b, c = 3] = [1, 2, 3])
+            {
+                console.log(a, b, c);  //실행 결과 “1 2 3”
+            }
+
+            myFunction(undefined);
+        </script>
+    </body>
+</html>

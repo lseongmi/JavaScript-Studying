@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+        <script type="module">
+          function* generator_function()
+          {
+            
+            try
+            {
+              yield 1;
+            }
+            catch(e)
+            {
+              console.log("첫 번째 예외");
+            }
+           
+            try
+            {
+              yield 2;
+            }
+            catch(e)
+            {
+              console.log("두 번째 예외");
+            }  
+            
+          }
+
+          var generator = generator_function();
+
+          console.log(generator.next().value);
+          console.log(generator.throw("예외 문자열").value);
+          console.log(generator.throw("예외 문자열").done);
+        </script>
+    </body>
+</html>

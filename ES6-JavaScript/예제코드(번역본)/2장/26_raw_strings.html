@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+        <script type="module">
+            let tag = function(strings, ...values)
+            {
+                return strings.raw[0]
+            };
+
+            let str = tag `안녕 \n 하세요!!!`;
+             
+            console.log(str);
+        </script>
+    </body>
+</html>

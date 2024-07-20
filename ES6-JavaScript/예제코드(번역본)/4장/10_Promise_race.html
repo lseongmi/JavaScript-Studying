@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+        <script type="module">
+          var p1 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+              resolve("이룸값 1");
+            }, 1000);
+          });
+
+          var p2 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+              resolve("이룸값 2");
+            }, 2000);
+          });
+
+          var arr = [p1, p2];
+
+          Promise.race(arr).then(function(value){
+            console.log(value); //실행 결과 "이룸값 1"
+          }, function(reason){
+            console.log(reason); 
+          });
+
+        </script>
+    </body>
+</html>

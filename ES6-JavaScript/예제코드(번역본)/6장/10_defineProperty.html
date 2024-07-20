@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var proxy = new Proxy({}, {
+          defineProperty: function(target, property, descriptor){
+              Object.defineProperty(target, property, descriptor);
+              return true;
+          }
+        });
+
+        Reflect.defineProperty(proxy, "name", {value: "수지"});
+
+        console.log(proxy.name); //실행 결과 "수지"
+      </script>
+    </body>
+</html>

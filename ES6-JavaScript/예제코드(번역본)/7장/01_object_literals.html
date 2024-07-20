@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Learning ECMAScript 6</title>
+    </head>
+    <body>
+        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+        <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+        <script type="module">
+          var student = {
+            name: "수지",
+            printName: function(){
+              console.log(this.name);
+            }
+          }
+
+          student.printName(); //실행 결과 “Eden”
+        </script>
+    </body>
+</html>

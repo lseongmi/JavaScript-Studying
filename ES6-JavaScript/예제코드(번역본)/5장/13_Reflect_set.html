@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Learning ECMAScript 6</title>
+      <script type="text/javascript" src="reflect.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        var obj1 = {
+          __name__: "수지"
+        };
+
+        Reflect.defineProperty(obj1, "name", {
+          set: function(newName){
+            this.__name__ = newName;
+          },
+
+          get: function(){
+            return this.__name__;
+          }
+        });
+
+        var obj2 = {
+          __name__: "민호"
+        };
+
+        Reflect.set(obj1, "name", "수지", obj2);
+
+        console.log(obj1.name); //실행 결과 "수지"
+        console.log(obj2.__name__); //실행 결과 "수지"
+      </script>
+    </body>
+</html>
