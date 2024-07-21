@@ -7,15 +7,19 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
-            console.log(isFinite(10));
-            console.log(isFinite(NaN));
-            console.log(isFinite(null));
-            console.log(isFinite([]));
+            //isFinite(number) : 유현숫자 여부를 체크하지만 
+            //Number타입으로 변환한 값들까지 true를 반환
+            console.log(isFinite(10)); //true
+            console.log(isFinite(NaN)); //false
+            console.log(isFinite(null)); //true
+            console.log(isFinite([])); //true
 
-            console.log(Number.isFinite(10));
-            console.log(Number.isFinite(NaN));
-            console.log(Number.isFinite(null));
-            console.log(Number.isFinite([]));
+            //Number.isFinite(number) : 유한 숫자 여부를 판단
+            //window.isFinite()의 문제점이 해결되었다
+            console.log(Number.isFinite(10)); //true
+            console.log(Number.isFinite(NaN)); //false
+            console.log(Number.isFinite(null)); //false
+            console.log(Number.isFinite([])); //false
         </script>
     </body>
 </html>

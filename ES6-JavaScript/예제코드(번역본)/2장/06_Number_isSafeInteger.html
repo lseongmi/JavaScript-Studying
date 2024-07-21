@@ -7,12 +7,13 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
-            console.log(Number.isSafeInteger(156));
-            console.log(Number.isSafeInteger('1212'));
-            console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER));
-            console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1));
-            console.log(Number.isSafeInteger(Number.MIN_SAFE_INTEGER));
-            console.log(Number.isSafeInteger(Number.MIN_SAFE_INTEGER - 1));
+            //Number.isSafeInteger(number) : 안전 정수(IEEE 754 규격에 맞게 다른 정수로 반올림하지 않아도 되는 숫자) 구분
+            console.log(Number.isSafeInteger(156)); //true
+            console.log(Number.isSafeInteger('1212')); //false
+            console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER)); //true
+            console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)); //false
+            console.log(Number.isSafeInteger(Number.MIN_SAFE_INTEGER)); //true
+            console.log(Number.isSafeInteger(Number.MIN_SAFE_INTEGER - 1)); //false
         </script>
     </body>
 </html>

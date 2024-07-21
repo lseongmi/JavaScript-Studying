@@ -7,13 +7,16 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //Number.EPSILON : 1과 1보다 큰 숫자 중 가장 작은 숫자의 차이를 나타낸다
+            //두 숫자가 충분히 가까운지를 비교할 때 Number.EPSILON을 사용하면 오차를 무시할 수 있다.
             function epsilonEqual(a, b) 
             {
               return Math.abs(a - b) < Number.EPSILON;
             }
 
-            console.log(epsilonEqual(0.1 + 0.2, 0.3));
-            console.log(epsilonEqual(0.9 - 0.8, 0.1));
+            //epsilonEqual : 두 값의 동등 여부를 비교하는 함수
+            console.log(epsilonEqual(0.1 + 0.2, 0.3)); //true
+            console.log(epsilonEqual(0.9 - 0.8, 0.1)); //true
         </script>
     </body>
 </html>
