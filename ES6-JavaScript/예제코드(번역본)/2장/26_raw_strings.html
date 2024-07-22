@@ -7,6 +7,8 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //원래 문자열 : 이스케이프 문자를 해석하지 않은 일반 문자열
+            //String.raw 태그 함수를 이용하면 템플릿 문자열의 원래 모습이 나온다
             let tag = function(strings, ...values)
             {
                 return strings.raw[0]

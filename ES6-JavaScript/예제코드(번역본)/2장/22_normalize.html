@@ -7,11 +7,15 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+          //문제를 해결하려면 서로게이트 페어를 16비트로 전환해야함 -> 정규화 필요
+          //normalize() : 겅규화한 문자열 반환
             var a = "\u00E9".normalize();
             var b = "e\u0301".normalize();
 
+            //== : 서로게이트페어 무시
             console.log(a == b);
 
+            //length : 서로게이트페어 무시
             console.log(a.length);
             console.log(b.length);
 

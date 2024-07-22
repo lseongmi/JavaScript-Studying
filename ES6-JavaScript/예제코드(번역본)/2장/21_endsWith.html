@@ -7,6 +7,8 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //endsWith(string, index) : 주어진 문자열로 끝나는지 확인
+            //두번째 파라미터에 찾아볼 시작 위치 지정가능
             var str = "안녕, 나는 자바스크립트 개발자라궁!";
             console.log(str.endsWith("개발자라궁!")); //실행 결과 "true"
             console.log(str.endsWith("개발자", 17)); //실행 결과 "true"

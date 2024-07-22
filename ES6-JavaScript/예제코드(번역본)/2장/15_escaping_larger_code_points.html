@@ -7,7 +7,16 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //\u(16진수) 붙여 이스케이프 할 수 있음
+            //뒤에 무조건 4개의 char가 와야하는데 2,3개가 올시
+            //앞을 0으로 패딩해줌(\u063 -> \u0063 이 된다)
+            var \u0061 = "\u0061\u0062\u0063";
+            console.log(a);
+
+            //\u1F691 을 표현하기 위해 나란히 붙인 2개의 유니코드를 서로게이트페어라고 했다(es5이전)
             console.log("\uD83D\uDE91");
+            //es6부터는 서로게이트 페어 없이도 쓸 수 있게 되었다.
+            //\u1F691를 \uD83D\uDE91로 저장하므로 문자열 길이는 2
             console.log("\u{1F691}");
         </script>
     </body>

@@ -7,8 +7,9 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
-            console.log(String.fromCodePoint(0x61, 0x62, 0x63)); 
-            console.log("\u0061\u0062" == String.fromCodePoint(0x61, 0x62));
+            //STring.fromCodePoint(number1, number2) : 코드 포인트 뭉치를 입력받아 해당 문자열을 반환
+            console.log(String.fromCodePoint(0x61, 0x62, 0x63));  //abc
+            console.log("\u0061\u0062" == String.fromCodePoint(0x61, 0x62)); //true
         </script>
     </body>
 </html>
