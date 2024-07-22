@@ -7,6 +7,8 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //Math.imul(number1, number2) : 32비트 정수 2개를 받아 곱한 결괏값의 하위 32비트를 반환
+            //32비트 정수 곱셈을 할 수 있는 유일한 방법
             console.log(Math.imul(590, 5000000)); //32비트 정수 곱셈
             console.log(590 * 5000000); //64비트 부동 소수점 곱셈
         </script>
