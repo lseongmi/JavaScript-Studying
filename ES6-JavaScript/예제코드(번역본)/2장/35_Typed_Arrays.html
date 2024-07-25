@@ -7,6 +7,8 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //타입화 배열 - 일반 배열을 다루는 것처럼 배열 버퍼 객체에 읽기/쓰기 할 수 있다.
+            //배열 버퍼 객체의 감싸미 노릇, 데이터를 n비트 숫자의 무리처럼 취급
             var buffer = new ArrayBuffer(80);
             var typed_array = new Float64Array(buffer);
 

@@ -7,6 +7,8 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //타입에 상관없이 유일한 값을 담은 콜렉션, 삽입한 순서대로 정렬된다
+            //중복값은 자동 삭제
             let set = new Set("안녕하세요!!!");
 
             set.add(12); //add 12
