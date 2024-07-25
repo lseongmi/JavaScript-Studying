@@ -7,6 +7,10 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //이터러블 객체에서 새 배열 인스턴스를 생성하는 메소드
+            //첫번째 인자 - 이터러블 객체
+            //두번째 인자 - 호출할 콜백(맵 함수)
+            //세번째 인자 - 맵 함 수 내부의 this값을 가리킨다
             let str = "0123";
             let obj = {number: 1};
             let arr = Array.from(str, function(value){

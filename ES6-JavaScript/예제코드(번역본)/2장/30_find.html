@@ -7,6 +7,10 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //테스트 함수를 만족하는 배열 원소를 반환
+            //첫 번째 인자 - 테스트 함수
+            //두번째 인자 - 테스트 함수 내부의 this값
+            //함수의 파라미터 1 - 대상 배열 원소 / 2 - 처리중인 현재 원소의 인덱스 / 3 - find()함수를 호출한 배열
             var x = 12;
             var arr = [11, 12, 13];
             var result = arr.find(function(value, index, array){

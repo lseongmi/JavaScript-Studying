@@ -7,6 +7,10 @@
         <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
+            //배열을 생성하는 array 생성자의 대체 수단임
+            //하나의 숫자 인자 값이 length 프로퍼티 값인 빈 배열
+            //유일한 원소로 하는 배열을 생성
+            //원소의 값 타입이나 원소가 몇 개 포함될 지 알 수 없다면 array 대신 array.of픞 사용하는 것이 좋다 .
             let arr1 = new Array(2);
             let arr2 = new Array.of(2);
 
