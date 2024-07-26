@@ -8,11 +8,13 @@
         <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
         <script type="module">
             //타입에 상관없이 유일한 값을 담은 콜렉션, 삽입한 순서대로 정렬된다
-            //중복값은 자동 삭제
+            //중복값은 자동 삭제된다.
+            //어떤 값을 조회하는 용도보다 존재 여부를 확인하기 위해 값을 묶어둘 떄 사용
             let set = new Set("안녕하세요!!!");
 
             set.add(12); //add 12
 
+            //set에 값이 존재하는지 확인
             console.log(set.has("!")); //값이 존재하는지 확인
             console.log(set.size);
 
